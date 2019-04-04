@@ -15,7 +15,8 @@ The image has a couple of ENV vars that can be used for customizing what and how
 
 This command will output the build result in the current folder:
 
-    docker run -v $(pwd):/build -e BEATS_VERSION=6.0.1 andig/beats4pi
+    docker build -t beats-builder .
+    docker run -v $(pwd)/build:/build --rm -ti beats-builder
     
 ## Other
 
